@@ -43,7 +43,7 @@ const TimelineItem = ({ year, title, desc }:{year:string,title:string,desc:strin
       initial={{ opacity: 0, y: 30 }}
       animate={controls}
       transition={{ duration: 0.6 }}
-      className="relative pl-15 mb-0  space-y-0 "
+      className="relative pl-15 mb-10  space-y-1 "
     >
       <div className="absolute left-[11px] top-1.5 w-5 h-5  bg-pink-500 border-4 border-white rounded-full shadow-md" />
       <h3 className="text-xl font-semibold text-primary">{year} – {title}</h3>

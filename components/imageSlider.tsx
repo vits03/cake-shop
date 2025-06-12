@@ -49,7 +49,7 @@ export default function ImageSlider() {
   return (
     <div className="relative w-full  mx-auto my-4">
       <div
-        className="relative h-[460px] md:mx-12 mx-5 group  overflow-hidden rounded-xl"
+        className="relative h-[350px] md:mx-12 mx-5 group  overflow-hidden rounded-xl"
         onMouseOver={handleMouseOver}
         onMouseLeave={handleMouseLeave}
       >
@@ -63,16 +63,16 @@ export default function ImageSlider() {
 
         {/* Chevron Buttons INSIDE image container */}
         <button
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/60 border-primary border-2 text-white p-2 rounded-full transition"
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/60   text-white p-2 rounded-full transition"
           onClick={prevSlide}
         >
           <ChevronLeft className="h-5 w-5 " />
         </button>
         <button
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-2 border-primary border-2 rounded-full transition"
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/60 text-white p-2 rounded-full transition"
           onClick={nextSlide}
         >
-          <ChevronRight className="h-5 w-5" />
+          <ChevronRight className="h-5 w-5 " />
         </button>
       </div>
 

@@ -3,7 +3,7 @@ import ImageSlider from './imageSlider'
 import ProductCard from './productCard'
 const ProductSection = () => {
   return (
-    <div className='flex flex-col my-10 max-w-5xl mx-auto text-center'>
+    <div className='flex flex-col  md:px-10 px-5 my-10 max-w-5xl mx-auto text-center'>
       <ImageSlider/>
 
       

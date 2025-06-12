@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav  className='  bg-[#F564A9] flex justify-center items-center'>
         <div  className='text-container max-w-7xl flex justify-center my-5 items-center'>
-           <p className="text-white text-2xl font-light ">CLARENCE CAKES</p>
+           <p className="text-white text-xl font-light ">CLARENCE CAKES</p>
         </div>
       
     </nav>

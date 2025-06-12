@@ -7,17 +7,23 @@ import CustomerReview from "@/components/customerReview";
 import HeroSection from "@/components/hero-section";
 import ProductSection from "@/components/products";
 import AboutSection from "@/components/aboutSection";
+import ContactSection from "@/components/contactSection";
 export default function Home() {
   return (
     <>  
     <Navbar/>
-    <div className="max-w-7xl min-h-screen  mx-auto">
+    <div className="  min-h-screen mx-auto">
     
     
       <HeroSection/>
-    <ProductSection/>
+      <div className="bg-gradient-to-l from-[#3a2d30]  via-[#281e2a]  to-[#3a2d30]" >
+ <ProductSection/>
     <CustomerReview/>
     <AboutSection/>
+    <ContactSection/>
+
+      </div>
+   
       </div>
       </>
   );

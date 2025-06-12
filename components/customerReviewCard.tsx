@@ -7,7 +7,9 @@ import { Quote } from 'lucide-react'
 import Image from 'next/image'
 import { UserCircle } from 'lucide-react'
 import { useEffect } from 'react';
-
+import cupcake from "@/public/cupcake.png"
+import donut from "@/public/donut.png"
+import cakeSlice from "@/public/cake-slice.png"
 const CustomerReviewCard = () => {
 
   const controls = useAnimation();
@@ -23,12 +25,14 @@ const CustomerReviewCard = () => {
       initial={{ opacity: 0, y: 60 }}
       animate={controls}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      className=" p-3 w-7/10 flex flex-col rounded-3xl border-primary bg-white border-4 rounded-2xl shadow-lg"
+      className=" py-2  px-4 w-8/10 md:w-95/100  relative flex flex-col border-primary bg-white border-4 rounded-2xl shadow-lg"
     >
-   
+      <Image src={cakeSlice} height={100} width={100} alt="cupcake" className='absolute size-12 rotate-15 top-6 left-2'/>
+           <Image src={donut} height={100} width={100} alt="cupcake" className='absolute size-17 rotate-15  bottom-4  -right-1'/>
+
       <p className='text-primary text-xs self-center font-medium mb-3'>Rosaline Cake</p>
-      <Quote  size={20}/>
-      <p className='text-sm text-pink-950 w-8/10 mx-auto'>"I love this cake! The flavor is amazing and the presentation is perfect. Highly recommend!"</p>
+      <Quote className='mt-3' size={20}/>
+      <p className='text-sm text-pink-950 w-8/10 my-2 mx-auto'>"I love this cake! The flavor is amazing and the presentation is perfect. Highly recommend!"</p>
       <Quote className='self-end'/>
 
 
