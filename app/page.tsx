@@ -1,11 +1,12 @@
 
-"use client"
 import Image from "next/image";
 import Navbar from "@/components/navbar";
 import dynamic from 'next/dynamic';
 import CustomerReview from "@/components/customerReview";
 // Dynamically import HeroSection and disable SSR for it
-const HeroSection = dynamic(() => import('@/components/hero-section'), { ssr: false });import ProductSection from "@/components/products";
+import HeroSection from "@/components/hero-section";
+import ProductSection from "@/components/products";
+import AboutSection from "@/components/aboutSection";
 export default function Home() {
   return (
     <>  
@@ -16,6 +17,7 @@ export default function Home() {
       <HeroSection/>
     <ProductSection/>
     <CustomerReview/>
+    <AboutSection/>
       </div>
       </>
   );
