@@ -27,7 +27,7 @@ const timelineItems = [
   },
 ];
 
-const TimelineItem = ({ year, title, desc }:{year:number,title:string,desc:string}) => {
+const TimelineItem = ({ year, title, desc }:{year:string,title:string,desc:string}) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
