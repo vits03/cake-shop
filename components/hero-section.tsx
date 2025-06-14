@@ -47,7 +47,7 @@ const HeroSection = () => {
               inline-block " src={cookie}/></span></p>
             </div>
             <div className="mx-auto">
-              <a href="#products" className="inline-block transition-all "><Button className="mt-10 text-md px-5 py-4 rounded-full">view our cakes</Button></a>
+              <a href="#products" className="inline-block transition-all animate-pulse"><Button className="mt-10 text-md px-5 py-6 rounded-full">view our cakes</Button></a>
             </div>
           </div>
           <div className="3d-item ">
