@@ -10,12 +10,15 @@ export const metadata: Metadata = {
 const mona = Mona_Sans({
   variable: "--font-mona-sans",
   subsets: ["latin"],
-})
+  display: "swap", // optional but recommended
+});
 
 const satisfy = Satisfy({
-  variable: "--font-satisfys",
-  weight:"400",
-})
+  variable: "--font-satisfy",
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap", // optional
+});
 
 export default function RootLayout({
   children,
