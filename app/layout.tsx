@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono,Mona_Sans } from "next/font/google";
+import { Geist, Geist_Mono,Mona_Sans,Grand_Hotel } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  subsets: ["latin"]
+});
+
+const hotel = Grand_Hotel( {
+  weight: "400",
+  variable: "--font-grand-hotel",
 });
 
 const geistMono = Geist_Mono({
@@ -28,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${mona.variable}   ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`   ${hotel.variable}        antialiased`}
       >
         {children}
       </body>

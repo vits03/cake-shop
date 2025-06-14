@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Grand+Hotel&family=Pacifico&family=Satisfy&display=swap');
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -52,8 +54,10 @@
 }
 
 body{
-    font-family: "Mona Sans", sans-serif;
-
+    font-family: "Mona Sans", "Satisfy","Pacifico","Dancing Script", "Grand Hotel", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+    
 }
 :root {
   --radius: 0.625rem;
@@ -169,6 +173,10 @@ body{
   animation: wordSlider 35s infinite ease-in-out;
 }
 
+.styled-font {
+  font-family:"Satisfy","Pacifico","Dancing Script"; 
+}
+
 /* Each individual word */
 .slide {
   height: 3.5rem; /* Must match wrapper height */
@@ -190,4 +198,6 @@ body{
   87.5% { transform: translateY(-24.5rem); }
  100%  { transform: translateY(0); }
 }
-
+  html {
+    scroll-behavior: smooth;
+  }

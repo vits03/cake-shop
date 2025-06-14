@@ -8,6 +8,7 @@ import HeroSection from "@/components/hero-section";
 import ProductSection from "@/components/products";
 import AboutSection from "@/components/aboutSection";
 import ContactSection from "@/components/contactSection";
+import Footer from "@/components/footer";
 export default function Home() {
   return (
     <>  
@@ -16,12 +17,12 @@ export default function Home() {
     
     
       <HeroSection/>
-      <div className="bg-gradient-to-l from-[#3a2d30]  via-[#281e2a]  to-[#3a2d30]" >
+      <div className="bg-gradient-to-l from-[#281e2a]  via-[#3a2d30]  to-[#281e2a] " >
  <ProductSection/>
     <CustomerReview/>
     <AboutSection/>
     <ContactSection/>
-
+<Footer/>
       </div>
    
       </div>

@@ -21,8 +21,10 @@ const ContactSection = () => {
     }
   }, [inView, controls]);
     return (
-    <div className='flex flex-col items-center justify-center  md:px-10 px-5'>
-            <p className='text-xl font-semibold mt-10 text-white rounded-lg border-2 border-primary p-3 bg-primary'>👻 Contact us 👻</p>
+    <div className='flex flex-col items-center justify-center my-15 md:px-10 px-5'>
+           
+            <p className='text-3xl styled-font font-semibold mt-10 text-white '>👻 Contact us 👻</p>
+
    <section className="text-center flex flex-col  py-10 ">
       <p className="text-pink-200 mb-8">We’re happy to hear from you. Reach us through any of the channels below:</p>
  <motion.div
@@ -44,9 +46,7 @@ className="flex flex-col md:flex-row  items-center gap-10 text-lg text-primary" 
           <MessageCircle size={22} /> WhatsApp Chat
         </a>
 
-        <a href="https://facebook.com/pawtisserie" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-pink-300 transition">
-          <Facebook size={22} /> Facebook
-        </a>
+        
 
         <a href="https://instagram.com/pawtisserie" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-pink-300 transition">
           <Instagram size={22} /> Instagram

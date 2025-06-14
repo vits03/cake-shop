@@ -32,7 +32,7 @@ const CustomerReviewCard = () => {
 
       <p className='text-primary text-xs self-center font-medium mb-3'>Rosaline Cake</p>
       <Quote className='mt-3' size={20}/>
-      <p className='text-sm text-pink-950 w-8/10 my-2 mx-auto'>"I love this cake! The flavor is amazing and the presentation is perfect. Highly recommend!"</p>
+      <p className='text-md text-pink-950 w-8/10 my-2 styled-font font-medium  mx-auto'>" I love this cake! The flavor is amazing and the presentation is perfect. Highly recommend! "</p>
       <Quote className='self-end'/>
 
 

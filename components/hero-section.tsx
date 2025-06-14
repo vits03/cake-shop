@@ -5,7 +5,7 @@ import wa from "@/public/whatsapp.png";
 import ModelViewer from "./modelViewer";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
+import cookie from "@/public/cookie.png";
 const HeroSection = () => {
   //inlcude  header msg , gradient bg and rotating 3d model.
   return (
@@ -22,14 +22,14 @@ const HeroSection = () => {
             alt="WhatsApp"
             height={60}
             width={60}
-            className="fixed bottom-5 right-5 z-50 cursor-pointer"
+            className="fixed bottom-15 right-5 z-50 cursor-pointer"
           />
         </a>
-        <div className="main-wrapper flex flex-col md:flex-row md:justify-evenly justify-between items-center">
+        <div className="main-wrapper  flex flex-col md:flex-row md:justify-evenly justify-between items-center">
           <div className="header self-start  mt-10 md:mt-30">
-            <div className="text-5xl min-w-60 text-primary leading-tight">
+            <div className="text-4xl min-w-60 text-primary leading-tight">
               <div className="wrapper">
-                <div className="slide-container">
+                <div className="slide-container s">
                   <div className="slide">Delight 🥰</div>
                   <div className="slide">Freshness 🍰</div>
                   <div className="slide">Love ❤️</div>
@@ -41,10 +41,13 @@ const HeroSection = () => {
                   <div className="slide"> Bliss 🌈</div>
                 </div>
               </div>
-              <p className="mt-2">in every bite!</p>
+              <p className="mt-2 text-primary ">in every <span className="bite-text">bite <Image alt="cookie" className="size-8
+              
+              
+              inline-block " src={cookie}/></span></p>
             </div>
             <div className="mx-auto">
-              <Button className="mt-10">view our cakes</Button>
+              <a href="#products" className="inline-block transition-all "><Button className="mt-10 text-md px-5 py-4 rounded-full">view our cakes</Button></a>
             </div>
           </div>
           <div className="3d-item ">
