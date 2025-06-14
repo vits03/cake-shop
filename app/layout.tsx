@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mona_Sans } from "next/font/google";
+import { Mona_Sans,Satisfy } from "next/font/google";
 import "./globals.css";
 
 
@@ -12,6 +12,11 @@ const mona = Mona_Sans({
   subsets: ["latin"],
 })
 
+const satisfy = Satisfy({
+  variable: "--font-satisfys",
+  weight:"400",
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`  ${mona.variable} antialiased`}
+        className={`  ${mona.variable}  ${satisfy.variable} antialiased`}
       >
         {children}
       </body>
