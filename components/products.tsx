@@ -7,7 +7,7 @@ const ProductSection = () => {
       <ImageSlider/>
 
       
-               <p className='text-3xl styled-font font-semibold my-10 text-white '>🎂 Our Products 🎂</p>
+               <p className='text-3xl styled-font font-semibold my-10 text-white '>💗 Our Products 💗</p>
 
        <div  className="card-container  grid gap-5  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center place-items-center">
        <ProductCard/>  

@@ -15,7 +15,7 @@ function Model() {
   return   <primitive
   ref={modelRef}
   object={gltf.scene}
-  position={[0, -2, 0]}
+  position={[0, -1, 0]}
   scale={1}
 />
 
@@ -25,8 +25,8 @@ function Model() {
 
 const ModelViewer = () => {
   return (
-    <div className="w-[325px] lg:w-[400px] h-[500px]">
-      <Canvas camera={{ position: [-5,2,-5], fov:50 }}>
+    <div className="w-[325px] lg:w-[400px] mt-10 h-[500px]">
+      <Canvas camera={{ position: [-3,2,-5], fov:50 }}>
         <ambientLight intensity={0.1} />
         <Suspense fallback={null}>
           <Model />

@@ -9,8 +9,8 @@ import cookie from "@/public/cookie.png";
 const HeroSection = () => {
   //inlcude  header msg , gradient bg and rotating 3d model.
   return (
-    <div className=" bg-gradient-to-b from-[#281e2a] via-[#3a2d30]  to-[#281e2a]">
-      <section className="h-[calc(100vh-73px)] max-w-7xl  mx-auto  md:px-10 px-5 flex flex-col py-5">
+    <div className=" hero ">
+      <section className="max-w-7xl max-h-[800px]  mx-auto  md:px-10 px-5 flex flex-col py-5">
         <a
           href="http://wa.me/58249318"
           target="_blank"
@@ -22,12 +22,12 @@ const HeroSection = () => {
             alt="WhatsApp"
             height={60}
             width={60}
-            className="fixed bottom-15 right-5 z-50 cursor-pointer"
+            className="fixed bottom-12 right-5 z-50 cursor-pointer"
           />
         </a>
-        <div className="main-wrapper  flex flex-col md:flex-row md:justify-evenly justify-between items-center">
-          <div className="header self-start  mt-10 md:mt-30">
-            <div className="text-4xl min-w-60 text-primary leading-tight">
+        <div className="main-wrapper styled-font font-semibold flex flex-col md:flex-row md:justify-evenly justify-between items-center">
+          <div className="header self-start   mt-10 md:mt-30">
+            <div className="text-2xl lg:text-4xl min-w-60 text-primary leading-tight">
               <div className="wrapper">
                 <div className="slide-container s">
                   <div className="slide">Delight 🥰</div>
@@ -41,13 +41,35 @@ const HeroSection = () => {
                   <div className="slide"> Bliss 🌈</div>
                 </div>
               </div>
-              <p className="mt-2 text-primary ">in every <span className="bite-text">bite <Image alt="cookie" className="size-8
+              <p className="mt-2 text-primary ">
+                in every{" "}
+                <span className="bite-text">
+                  bite{" "}
+                  <Image
+                    alt="cookie"
+                    className="size-8
               
               
-              inline-block " src={cookie}/></span></p>
+              inline-block "
+                    src={cookie}
+                  />
+                </span>
+              </p>
+            </div>
+            <div>
+              <p className="text-pink-200 font-normal mt-5">
+                we offer custom cakes and selected pastries.
+              </p>
             </div>
             <div className="mx-auto">
-              <a href="#products" className="inline-block transition-all animate-pulse"><Button className="mt-10 text-md px-5 py-6 rounded-full">view our cakes</Button></a>
+              <a
+                href="#products"
+                className="inline-block transition-all animate-pulse"
+              >
+                <Button className="mt-10 text-lg px-5  font-medium  py-6 rounded-full">
+                  view  cakes
+                </Button>
+              </a>
             </div>
           </div>
           <div className="3d-item ">

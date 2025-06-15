@@ -21,7 +21,7 @@ const ContactSection = () => {
     }
   }, [inView, controls]);
     return (
-    <div className='flex flex-col items-center justify-center my-15 md:px-10 px-5'>
+    <div className='flex flex-col items-center justify-center mb-15 md:px-10 px-5'>
            
             <p className='text-3xl styled-font font-semibold mt-10 text-white '>👻 Contact us 👻</p>
 

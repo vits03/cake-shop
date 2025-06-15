@@ -2,7 +2,7 @@ import React from "react";
 import CustomerReviewCard from "./customerReviewCard";
 const CustomerReview = () => {
   return (
-    <div className="flex flex-col items-center   md:px-10 px-5 ">
+    <div className="flex flex-col items-center   mt-20 md:px-10 px-5 ">
       {" "}
       <p className="text-3xl font-semibold my-10 text-white  styled-font">
         🍪 Reviews 🍪
