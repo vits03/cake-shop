@@ -6,15 +6,7 @@ import cake1 from "@/public/cake1.jpg";
 import cake2 from "@/public/cake2.jpg";
 import cake3 from "@/public/cake3.jpg";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-
-
-const images = [
-  { src: "/cake1.jpg" },
-  { src: "/cake2.jpg" },
-  { src: "/cake3.jpg" }
-];
-
+import { images } from "@/constants/constants";
 export default function ImageSlider() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isHovered, setIsHovered] = useState<boolean>(false);

@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { Button } from "./ui/button";
 import dynamic from "next/dynamic";
@@ -6,10 +7,15 @@ import ModelViewer from "./modelViewer";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import cookie from "@/public/cookie.png";
+const Confetti = dynamic(() => import("react-confetti"), { ssr: false });
+import { useWindowSize } from "@react-hook/window-size";
 const HeroSection = () => {
   //inlcude  header msg , gradient bg and rotating 3d model.
+    const [width, height] = useWindowSize();
   return (
     <div className=" hero ">
+      
+      
       <section className="max-w-7xl max-h-[800px]  mx-auto  md:px-10 px-5 flex flex-col py-5">
         <a
           href="http://wa.me/58249318"
@@ -72,7 +78,17 @@ const HeroSection = () => {
               </a>
             </div>
           </div>
-          <div className="3d-item ">
+          <div className="3d-item relative">
+              <Confetti
+        width={300}
+        height={height}
+        numberOfPieces={50}
+        recycle={true}
+        gravity={0.04}
+        opacity={0.4}
+        wind={0.01}
+        className="pointer-events-none z-0"
+      />
             <ModelViewer />
           </div>
         </div>
