@@ -5,6 +5,8 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 import { Suspense, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { useEffect} from 'react';
+import { useWindowSize } from "@react-hook/window-size";
+
 function Model() {
   const gltf = useGLTF('/pawtisserie.glb');
   const modelRef = useRef<THREE.Group>(null);
@@ -24,9 +26,11 @@ function Model() {
 
 
 const ModelViewer = () => {
+      const [width, height] = useWindowSize();
+        
   return (
-    <div className="w-[325px] lg:w-[400px] mt-10 h-[500px]">
-      <Canvas camera={{ position: [-3,2,-5], fov:50 }}>
+    <div className="w-[325px] lg:w-[400px] md:mt-20 mt-10 h-[500px]">
+      <Canvas camera={{ position: [-3,2,-5], fov: width < 500 ?55:45 }}>
         <ambientLight intensity={0.1} />
         <Suspense fallback={null}>
           <Model />

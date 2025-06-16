@@ -3,8 +3,13 @@ import React from "react";
 import { Button } from "./ui/button";
 import dynamic from "next/dynamic";
 import wa from "@/public/whatsapp.png";
-import ModelViewer from "./modelViewer";
-import Image from "next/image";
+
+const ModelViewer = dynamic(() => import("./modelViewer"), {
+  ssr: false,
+  loading: () =>   <div className="w-64 h-[70vh] mt-15 bg-pink-200 animate-pulse rounded-2xl flex items-center justify-center text-pink-600 font-semibold">
+      <p>Loading...</p>
+    </div>, // optional fallback
+});import Image from "next/image";
 import { motion } from "framer-motion";
 import cookie from "@/public/cookie.png";
 const Confetti = dynamic(() => import("react-confetti"), { ssr: false });
@@ -16,7 +21,7 @@ const HeroSection = () => {
     <div className=" hero ">
       
       
-      <section className="max-w-7xl max-h-[800px]  mx-auto  md:px-10 px-5 flex flex-col py-5">
+      <section className="max-w-7xl   mx-auto  md:px-10 px-5 flex flex-col py-5">
         <a
           href="http://wa.me/58249318"
           target="_blank"
@@ -35,7 +40,7 @@ const HeroSection = () => {
           <div className="header self-start   mt-10 md:mt-30">
             <div className="text-2xl lg:text-4xl min-w-60 text-primary leading-tight">
               <div className="wrapper">
-                <div className="slide-container s">
+                <div className="slide-container px-2  s">
                   <div className="slide">Delight 🥰</div>
                   <div className="slide">Freshness 🍰</div>
                   <div className="slide">Love ❤️</div>
@@ -79,7 +84,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="3d-item relative">
-              <Confetti
+             <Confetti
         width={300}
         height={height}
         numberOfPieces={50}
@@ -88,7 +93,7 @@ const HeroSection = () => {
         opacity={0.4}
         wind={0.01}
         className="pointer-events-none z-0"
-      />
+      /> 
             <ModelViewer />
           </div>
         </div>
