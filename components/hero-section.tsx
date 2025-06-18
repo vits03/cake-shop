@@ -52,7 +52,7 @@ const HeroSection = () => {
                   <div className="slide"> Bliss 🌈</div>
                 </div>
               </div>
-              <p className="mt-2 text-primary ">
+              <p className="mt-2 px-2  text-primary ">
                 in every{" "}
                 <span className="bite-text">
                   bite{" "}

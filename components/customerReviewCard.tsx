@@ -56,10 +56,10 @@ const CustomerReviewCard = ({ review }: ReviewsProps) => {
         {review.product}
       </p>
       <p className="text-md text-pink-950 w-8/10 my-2 py-7 styled-font font-medium  text-center">
-       {review.comment}
+      " {review.comment} "
       </p>
 
-      <div className="user-section flex gap-2 text-xs font-medium text-primary">
+      <div className="user-section    flex gap-2 text-xs font-medium text-primary">
         <Image src={review.image} height={30} width={30} className="rounded-full" alt="user" />
         <p className="self-center ">{review.name}</p>{" "}
       </div>

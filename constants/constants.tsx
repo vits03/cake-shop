@@ -37,7 +37,7 @@ export const Products = [
 export const Reviews = [
   {
     name: "Jane Doe",
-    comment: "The cake was fresh, moist, and absolutely perfect!",
+    comment: "  The cake was fresh, moist, and absolutely perfect ",
     image: "/images/portrait1.jpg",
     product: "Rosaline Cake",
   },
@@ -49,7 +49,7 @@ export const Reviews = [
   },
   {
     name: "Raj Patel",
-    comment: "Highly recommend for birthdays, parties, or any occasion!",
+    comment: "Highly recommend for birthdays or any occasion!",
     image: "/images/portrait4.jpg",
     product: "Chocolate Cake",
   },
