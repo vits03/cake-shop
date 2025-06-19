@@ -35,11 +35,11 @@ const Navbar = () => {
 
       {/* Mobile Menu with Transition */}
       <div
-        className={`transition-all duration-300 ease-in-out overflow-hidden md:hidden bg-[#F564A9] px-4 ${
+        className={`transition-all duration-300 ease-in-out right-0 overflow-hidden md:hidden bg-[#F564A9] px-8 ${
           menuOpen ? 'max-h-64 py-3' : 'max-h-0 py-0'
         }`}
       >
-        <div className="flex flex-col space-y-3 text-sm font-medium">
+        <div className="flex flex-col space-y-3 text-mdfont-medium">
           <a href="#products" onClick={() => setMenuOpen(false)}>Cake</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About Us</a>
           <a href="#reviews" onClick={() => setMenuOpen(false)}>Reviews</a>
