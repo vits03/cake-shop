@@ -13,7 +13,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-3 ">
           <a href="#hero">
-            <Image src="/images/new-logo.png" className='rounded-full' alt="logo" width={65} height={70} />
+            <Image src="/images/new-logo.png" alt="logo" width={65} height={70} />
           </a>
         </div>
 
