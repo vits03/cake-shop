@@ -39,7 +39,7 @@ export default function ImageSlider() {
   };
 
   return (
-    <div className="relative w-full  mx-auto my-4">
+    <div className="relative w-full mt-15 mx-auto my-4">
       <div
         className="relative h-[350px] md:mx-12 mx-5 group  overflow-hidden rounded-xl"
         onMouseOver={handleMouseOver}

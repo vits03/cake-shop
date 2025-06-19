@@ -3,7 +3,7 @@ import CustomerReviewCard from "./customerReviewCard";
 import { Reviews } from "@/constants/constants";
 const CustomerReview = () => {
   return (
-    <div className="flex flex-col items-center   mt-20 md:px-10 px-5 ">
+    <div  id="reviews" className="flex  scroll-m-35 md:scroll-m-20 flex-col items-center   mt-20 md:px-10 px-5 ">
       {" "}
       <p className="text-3xl font-semibold my-10 text-white  styled-font">
         🍪 Reviews 🍪

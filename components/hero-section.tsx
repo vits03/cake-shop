@@ -18,10 +18,10 @@ const HeroSection = () => {
   //inlcude  header msg , gradient bg and rotating 3d model.
     const [width, height] = useWindowSize();
   return (
-    <div className=" hero ">
+    <div id="hero" className=" hero ">
       
       
-      <section className="max-w-7xl   mx-auto  md:px-10 px-5 flex flex-col py-5">
+      <section className="max-w-7xl mt-10  mx-auto  md:px-10 px-5 flex flex-col py-5">
         <a
           href="http://wa.me/58249318"
           target="_blank"

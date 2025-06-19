@@ -1,16 +1,53 @@
-import React from 'react'
-import Image from 'next/image'
-import logo  from '@/public/logo-final.png'
+'use client';
+
+import React, { useState } from 'react';
+import Image from 'next/image';
+import logo from '@/public/logo-final.png';
+import { Menu, X } from 'lucide-react';
+
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav  className='  bg-[#F564A9] flex justify-center items-center'>
-        <div  className='text-container max-w-7xl flex my-3 justify-center  items-center'>
-<Image  src={logo} alt="logo" width={100} height={100}/>
-
+    <nav className="fixed top-0 left-0 w-full styled-font z-50 bg-[#F564A9] text-white shadow-md">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        {/* Logo */}
+        <div className="flex items-center">
+          <a href="#hero">
+            <Image src={logo} alt="logo" width={80} height={80} />
+          </a>
         </div>
-      
-    </nav>
-  )
-}
 
-export default Navbar
+        {/* Desktop Links */}
+        <div className="hidden md:flex space-x-6 text-md">
+           <a href="#products" onClick={() => setMenuOpen(false)}>Products</a>
+          <a href="#reviews" onClick={() => setMenuOpen(false)}>Reviews</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact Us</a>
+        </div>
+
+        {/* Mobile Toggle */}
+        <div className="md:hidden">
+          <button onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu with Transition */}
+      <div
+        className={`transition-all duration-300 ease-in-out overflow-hidden md:hidden bg-[#F564A9] px-4 ${
+          menuOpen ? 'max-h-64 py-3' : 'max-h-0 py-0'
+        }`}
+      >
+        <div className="flex flex-col space-y-3 text-sm font-medium">
+          <a href="#products" onClick={() => setMenuOpen(false)}>Cake</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>About Us</a>
+          <a href="#reviews" onClick={() => setMenuOpen(false)}>Reviews</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
