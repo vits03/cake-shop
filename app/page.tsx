@@ -17,7 +17,7 @@ export default function Home() {
     
     
       <HeroSection/>
-      <div className="bg-gradient-to-l from-[#281e2a]  via-[#3a2d30]  to-[#281e2a] " >
+      <div className="bg-[#fafafa] " >
  <ProductSection/>
     <CustomerReview/>
     <AboutSection/>

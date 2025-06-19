@@ -47,7 +47,7 @@ const TimelineItem = ({ year, title, desc }:{year:string,title:string,desc:strin
     >
       <div className="absolute left-[11px] top-1.5 w-5 h-5  bg-pink-500 border-4 border-white rounded-full shadow-md" />
       <h3 className="text-xl font-semibold text-primary">{year} – {title}</h3>
-      <p className="text-pink-200 mb-6">{desc}</p>
+      <p className="text-pink-950 mb-6">{desc}</p>
     </motion.div>
   );
 };
@@ -57,7 +57,7 @@ export default function AboutTimeline() {
    <section className="bg-rimary py-20 px-4 md:px-8">
   <div className="max-w-3xl mx-auto text-center">
     <h2 className="text-3xl font-bold text-primary mb-6">From Oven to Heart</h2>
-    <p className="text-pink-200 text-lg mb-12">
+    <p className="text-pink-950 text-lg mb-12">
       Our journey through sugar, smiles, and sprinkles.
     </p>
 

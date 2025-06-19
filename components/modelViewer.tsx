@@ -31,7 +31,7 @@ const ModelViewer = () => {
   return (
     <div className="w-[325px] lg:w-[400px] md:mt-20 mt-10 h-[500px]">
       <Canvas camera={{ position: [-3,2,-5], fov: width < 500 ?55:45 }}>
-        <ambientLight intensity={0.1} />
+        <ambientLight intensity={0.6} />
         <Suspense fallback={null}>
           <Model />
         </Suspense>

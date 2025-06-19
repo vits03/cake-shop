@@ -23,10 +23,10 @@ const ContactSection = () => {
     return (
     <div id="contact" className='flex flex-col items-center justify-center mb-15 md:px-10 px-5'>
            
-            <p className='text-3xl styled-font font-semibold mt-10 text-white '>👻 Contact us 👻</p>
+            <p className='text-3xl styled-font font-semibold mt-10 text-primary '>👻 Contact us 👻</p>
 
    <section className="text-center flex flex-col  py-10 ">
-      <p className="text-pink-200 mb-8">We’re happy to hear from you. Reach us through any of the channels below:</p>
+      <p className="text-pink-950 mb-8">We’re happy to hear from you. Reach us through any of the channels below:</p>
  <motion.div
        ref={ref}
       initial={{ opacity: 0, y:30 }}

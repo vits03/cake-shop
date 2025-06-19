@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import logo from '@/public/logo-final.png';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
@@ -10,11 +9,11 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full styled-font z-50 bg-[#F564A9] text-white shadow-md">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center gap-3 ">
           <a href="#hero">
-            <Image src={logo} alt="logo" width={80} height={80} />
+            <Image src="/images/new-logo.png" className='rounded-full' alt="logo" width={65} height={70} />
           </a>
         </div>
 

@@ -18,7 +18,7 @@ const HeroSection = () => {
   //inlcude  header msg , gradient bg and rotating 3d model.
     const [width, height] = useWindowSize();
   return (
-    <div id="hero" className=" hero ">
+    <div id="hero" className=" hero  ">
       
       
       <section className="max-w-7xl mt-10  mx-auto  md:px-10 px-5 flex flex-col py-5">
@@ -68,7 +68,7 @@ const HeroSection = () => {
               </p>
             </div>
             <div>
-              <p className="text-pink-200 font-normal mt-5">
+              <p className="text-pink-950 font-normal mt-5">
                 we offer custom cakes and selected pastries.
               </p>
             </div>
