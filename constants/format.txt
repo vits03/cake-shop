@@ -1,0 +1,36 @@
+
+
+cakes :
+
+{
+   title: " custom cake"
+   description : " order cake to select size and flavoour"
+   price: " As from Rs 500" 
+   sizes: 
+   
+     "bento : {
+        "vanilla": "Rs 500",
+        "chocolate": "Rs 550",
+     },
+     
+
+   
+         "classic ":{
+             "vanilla": "Rs 700",
+             "chocolate": "Rs 750",
+         },
+     
+    
+     " Deluxe": {
+         "vanilla": "Rs 900",
+         "chocolate": "Rs 950",
+     }
+
+
+   },
+
+
+
+
+
+}

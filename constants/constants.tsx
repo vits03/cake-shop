@@ -34,10 +34,59 @@ export const Products = [
   },
 ];
 
+export const AllProducts = {
+  cake: {
+    title: "Custom Cake",
+    description: "Order a cake by selecting size and flavour",
+    sizes: {
+      Bento: {
+        vanilla: "Rs 590",
+        almond: "Rs 690",
+        lemon: "Rs 790",
+         chocolate: "Rs 790",
+      },
+      Classic: {
+        vanilla: "Rs 1800",
+        almond: "Rs 2000",
+        lemon: "Rs 2000",
+         chocolate: "Rs 2000"
+      },
+      Deluxe: {
+         vanilla: "Rs 2200",
+        almond: "Rs 2500",
+        lemon: "Rs 2500",
+         chocolate: "Rs 2500"
+      }
+    }
+  },
+  cakesicles: {
+    title: "Cakesicles",
+    description: "Decorated cake popsicles in assorted flavours",
+    sizes: {
+      "6": "Rs 500",
+      "10": "Rs 800",
+      "15": "Rs 1125"
+    }
+  },
+  strawberryDipped: {
+    title:"Strawberry Dipped",
+    description: "Fresh strawberries dipped in premium chocolate",
+    sizes: {
+      "5": "Rs 450",
+      "12": "Rs 1100",
+      "15": "Rs 1300",
+      "20": "Rs 1650",
+      "25": "Rs 2100",
+      "30": "Rs 2500"
+    }
+  }
+};
+
+
 export const Reviews = [
   {
     name: "Jane Doe",
-    comment: "  The cake was fresh, moist, and absolutely perfect ",
+    comment: "The cake was fresh, moist, and absolutely perfect!",
     image: "/images/portrait1.jpg",
     product: "Rosaline Cake",
   },
@@ -49,7 +98,7 @@ export const Reviews = [
   },
   {
     name: "Raj Patel",
-    comment: "Highly recommend for birthdays or any occasion!",
+    comment: "Highly recommend for birthdays, parties, or any occasion!",
     image: "/images/portrait4.jpg",
     product: "Chocolate Cake",
   },

@@ -34,12 +34,12 @@ const ContactSection = () => {
       transition={{ duration: 0.5, ease: 'easeOut' }}
 className="flex flex-col md:flex-row  items-center gap-10 text-lg text-primary"      >
    
-        <a href="tel:+2301234567" className="flex items-center gap-3 hover:text-pink-300 transition">
-          <Phone size={22} /> +230 123 4567
+        <a href="tel:+230 59256089" className="flex items-center gap-3 hover:text-pink-300 transition">
+          <Phone size={22} /> 59256089
         </a>
 
         <a href="mailto:hello@pawtisserie.com" className="flex items-center gap-3 hover:text-pink-300 transition">
-          <Mail size={22} /> hello@pawtisserie.com
+          <Mail size={22} /> gireshnasoogumbur@gmail.com
         </a>
 
         <a href="https://wa.me/2301234567" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-pink-300 transition">

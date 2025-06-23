@@ -24,31 +24,25 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import emailjs from "emailjs-com";
 import { Loader2 } from "lucide-react";
-
-interface Product {
-  title: string;
-  description: string;
-  imageUrl: string;
-  prices: {
-    small: number;
-    medium: number;
-    large: number;
-  };
+import { AllProducts } from "@/constants/constants";
+import ProductSection from "./products";
+type ProductCardProps = {
+  product: keyof typeof AllProducts; // 'cake' | 'cakesicles' | 'strawberryDipped'
 }
 
-type ProductCardProps = {
-  product: Product;
-};
-
-type CakeSize = "small" | "medium" | "large";
+type CakeSize = "Bento" | "Classic" | "Deluxe";
+type Flavour = "vanilla" | "chocolate" | "almond" | "lemon";
 
 export default function OrderCakeModal({ product }: ProductCardProps) {
-  const [cake, setCake] = useState(product.title);
+    const data = AllProducts[product]
+  
+  const [cake, setCake] = useState(data.title);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [cakeSize, setCakeSize] = useState<CakeSize | "">("");
+  const [cakeSize, setCakeSize] = useState<string| "">("");
   const [notes, setNotes] = useState("");
   const [price, setPrice] = useState(0);
+  const [flavour,setFlavour] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<null | { type: "success" | "error"; text: string }>(null);
 
@@ -57,7 +51,8 @@ export default function OrderCakeModal({ product }: ProductCardProps) {
 
   useEffect(() => {
     if (cakeSize) {
-      setPrice(product.prices[cakeSize]);
+     // check f cake // cake - set 
+     console.log(cakeSize)
     }
   }, [cakeSize]);
 
@@ -82,15 +77,16 @@ export default function OrderCakeModal({ product }: ProductCardProps) {
     setLoading(true);
     setMessage(null);
 
-    const templateParams = {
-      user_name: name,
-      user_phone: phone,
-      cake_size: cakeSize,
-      notes,
-      cake_title: cake,
-      cake_price: price,
-    };
+  const templateParams = {
+  user_name: name,
+  user_phone: phone,
+  cake_size: product === "cake" ?cakeSize :`Box of ${cakeSize}` , // Use cakeSize for non-cake products too
+  notes,
+  cake_title: cake,
+  cake_price: price,
+};
 
+     
     try {
       await emailjs.send("service_ir8jeuv", "template_fug9cuv", templateParams, "OX3nBhCcVYrmxMZAk");
       setMessage({ type: "success", text: "Order sent successfully!" });
@@ -108,7 +104,21 @@ export default function OrderCakeModal({ product }: ProductCardProps) {
   return (
     <>
       {/* Main Order Dialog */}
-      <Dialog open={isMainDialogOpen} onOpenChange={setIsMainDialogOpen}>
+      <Dialog open={isMainDialogOpen}  onOpenChange={(open) => {
+    setIsMainDialogOpen(open);
+    if (!open) {
+      // Reset all states when dialog closes
+      setName("");
+      setPhone("");
+      setCakeSize("");
+      setFlavour("");
+      setNotes("");
+      setPrice(0);
+      setMessage(null);
+      setLoading(false);
+    }
+  }}
+>
         <DialogTrigger asChild>
           <Button className="buy-btn text-sm my-1 font-semibold w-6/10 mx-auto rounded-full">
             Order Cake
@@ -121,9 +131,9 @@ export default function OrderCakeModal({ product }: ProductCardProps) {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="flex justify-between items-center">
-              <p className="font-semibold text-primary">{product.title}</p>
+              <p className="font-semibold text-primary">{data.title}</p>
               <Image
-                src={product.imageUrl}
+                src={"/images/cake1.jpg"}
                 width={100}
                 height={100}
                 alt="cake"
@@ -158,24 +168,93 @@ pattern="^5\d{7}$"
             </div>
 
             <div className="grid gap-2">
-              <Label htmlFor="size">Cake Size</Label>
-              <Select onValueChange={(value: CakeSize) => setCakeSize(value)} required>
+              <Label htmlFor="size"> Size</Label>
+            <Select
+onValueChange={(value: string) => {
+  setCakeSize(value);
+
+  if (product !== "cake") {
+    const sizes = AllProducts[product].sizes as Record<string, string>;
+    const selectedPrice = sizes[value];
+    const priceNumber = Number((selectedPrice).replace(/[^\d]/g, ""));
+    setPrice(priceNumber);
+  }
+}}
+
+  required
+>
                 <SelectTrigger id="size">
                   <SelectValue placeholder="Select a size" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="small">Small - Rs {product.prices.small}</SelectItem>
-                  <SelectItem value="medium">Medium - Rs {product.prices.medium}</SelectItem>
-                  <SelectItem value="large">Large - Rs {product.prices.large}</SelectItem>
-                </SelectContent>
+{product === "cake" ? (
+  <>
+    <SelectItem value="Bento">
+      Bento (5 pax) – As from {AllProducts.cake.sizes.Bento.vanilla}
+    </SelectItem>
+    <SelectItem value="Classic">
+      Classic (10–12 pax) – As from {AllProducts.cake.sizes.Classic.vanilla}
+    </SelectItem>
+    <SelectItem value="Deluxe">
+      Deluxe (15–20 pax) – As from {AllProducts.cake.sizes.Deluxe.vanilla}
+    </SelectItem>
+  </>
+) : (
+  Object.entries(AllProducts[product].sizes).map(([boxSize, price]) => (
+    <SelectItem key={boxSize} value={boxSize}>
+      Box of {boxSize} – {price}
+    </SelectItem>
+  ))
+)}
+
+              
+                  </SelectContent>
               </Select>
             </div>
+    {product === "cake" && (
+  <div className="grid gap-2">
+    <Label htmlFor="flavour">Flavour</Label>
+ <Select
+  onValueChange={(value) => {
+    setFlavour(value as Flavour); // Cast value to Flavour type
+    if (cakeSize) {
+      const selectedPrice = AllProducts.cake.sizes[cakeSize as CakeSize][value as Flavour];
+      const priceNumber = Number(selectedPrice.replace(/[^\d]/g, ""));
+      setPrice(priceNumber);
+    }
+  }}
+  required
+>
+
+      <SelectTrigger id="flavour">
+        <SelectValue placeholder="Choose your flavour" />
+      </SelectTrigger>
+      <SelectContent>
+        {cakeSize ? (
+          Object.entries(AllProducts.cake.sizes[cakeSize as keyof typeof AllProducts.cake.sizes]).map(
+            ([flavour, price]) => (
+              <SelectItem key={flavour} value={flavour}>
+                {flavour} – {price}
+              </SelectItem>
+            )
+          )
+        ) : (
+          <SelectItem value="nosize" disabled>
+            Select a cake size first.
+          </SelectItem>
+        )}
+      </SelectContent>
+    </Select>
+  </div>
+)}
+
+
 
             <div className="grid gap-2">
               <Label htmlFor="notes">Notes</Label>
               <Textarea
                 id="notes"
-                placeholder="Add any specific instructions..."
+                placeholder="Tell us how to customize your cake..."
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
               />
@@ -187,7 +266,7 @@ pattern="^5\d{7}$"
               </p>
 
               <div className="rounded-xl bg-primary/5 p-3 mt-3 text-xs text-primary text-center">
-                <p>Payment via <strong>Juice</strong> (58249318) or on delivery.</p>
+                <p> Please note that Additional decoration will be charged.</p>
               </div>
             </div>
 

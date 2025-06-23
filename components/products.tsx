@@ -1,7 +1,7 @@
 import React from 'react'
 import ImageSlider from './imageSlider'
 import ProductCard from './productCard'
-import { Products } from '@/constants/constants'
+import { AllProducts } from '@/constants/constants'
 const ProductSection = () => {
 
 
@@ -17,9 +17,10 @@ const ProductSection = () => {
 
        <div  className="card-container  grid gap-5  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center place-items-center">
 
-       {Products.map((product, index) => (
-        <ProductCard key={index} product={product} />
-      ))}
+     {(Object.keys(AllProducts) as (keyof typeof AllProducts)[]).map((product, index) => (
+  <ProductCard key={index} product={product} />
+))}
+
     
        </div>
 

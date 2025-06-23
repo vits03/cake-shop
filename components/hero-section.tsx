@@ -23,7 +23,7 @@ const HeroSection = () => {
       
       <section className="max-w-7xl mt-15  mx-auto  md:px-10 px-5 flex flex-col py-5">
         <a
-          href="http://wa.me/58249318"
+          href="http://wa.me/59256089"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-10 left-5 z-50 cursor-pointer"
