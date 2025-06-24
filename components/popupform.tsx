@@ -83,6 +83,7 @@ export default function OrderCakeModal({ product }: ProductCardProps) {
   cake_size: product === "cake" ?cakeSize :`Box of ${cakeSize}` , // Use cakeSize for non-cake products too
   notes,
   cake_title: cake,
+  cake_flavour:flavour,
   cake_price: price,
 };
 

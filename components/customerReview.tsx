@@ -11,7 +11,7 @@ const CustomerReview = () => {
       <section className="grid grid-cols-1 max-w-5xl  md:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center w-full ">
         {Reviews.map((review, index) => (
           <CustomerReviewCard key={index} review={review} />
-        ))};
+        ))}
       </section>
     </div>
   );
