@@ -120,7 +120,7 @@ export default function OrderCakeModal({ product }: ProductCardProps) {
   }}
 >
         <DialogTrigger asChild>
-          <Button className="buy-btn text-sm my-1 font-semibold w-6/10 mx-auto rounded-full">
+          <Button className="buy-btn text-sm my-1 font-semibold w-7/10 mx-auto rounded-full">
             Order Cake
           </Button>
         </DialogTrigger>
@@ -133,7 +133,7 @@ export default function OrderCakeModal({ product }: ProductCardProps) {
             <div className="flex justify-between items-center">
               <p className="font-semibold text-primary">{data.title}</p>
               <Image
-                src={"/images/cake1.jpg"}
+                src={AllProducts[product].images[0]}
                 width={100}
                 height={100}
                 alt="cake"

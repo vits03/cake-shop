@@ -25,7 +25,7 @@ const sizes = AllProducts[product].sizes as Record<string, string>;
 
   return (
     <div className='w-[300px] bg-white border-3 border-primary min-h-[375px] rounded-2xl'>
-      <ImageSliderCard />
+      <ImageSliderCard product={product}/>
 
       <div className='px-2 py-1 flex flex-col justify-center space-y-1'>
         <p className='text-md text-primary text-left pl-2 font-semibold'>

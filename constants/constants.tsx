@@ -38,6 +38,22 @@ export const AllProducts = {
   cake: {
     title: "Custom Cake",
     description: "Order a cake by selecting size and flavour",
+    images:[
+  "/images/cakes/cake1.jpg",
+  "/images/cakes/cake2.jpg",
+  "/images/cakes/cake3.jpg",
+  "/images/cakes/cake4.jpg",
+  "/images/cakes/cake5.jpg",
+  "/images/cakes/cake6.jpg",
+  "/images/cakes/cake7.jpg",
+  "/images/cakes/cake8.jpg",
+  "/images/cakes/cake9.jpg",
+  "/images/cakes/cake10.jpg",
+  "/images/cakes/cake11.jpg",
+  "/images/cakes/cake12.jpg",
+  "/images/cakes/cake13.jpg",
+  "/images/cakes/cake14.jpg",
+],
     sizes: {
       Bento: {
         vanilla: "Rs 590",
@@ -61,6 +77,7 @@ export const AllProducts = {
   },
   cakesicles: {
     title: "Cakesicles",
+    images:["/images/cakesicles/cakesicle1.jpg","/images/cakesicles/cakesicle2.jpg","/images/cakesicles/cakesicle3.jpg"],
     description: "Decorated cake popsicles in assorted flavours",
     sizes: {
       "6": "Rs 500",
@@ -70,6 +87,17 @@ export const AllProducts = {
   },
   strawberryDipped: {
     title:"Strawberry Dipped",
+     images:[
+  "/images/strawberrydipped/strawberry1.jpg",
+  "/images/strawberrydipped/strawberry2.jpg",
+  "/images/strawberrydipped/strawberry3.jpg",
+  "/images/strawberrydipped/strawberry4.jpg",
+  "/images/strawberrydipped/strawberry5.jpg",
+  "/images/strawberrydipped/strawberry6.jpg",
+  "/images/strawberrydipped/strawberry7.jpg",
+  "/images/strawberrydipped/strawberry8.jpg",
+  "/images/strawberrydipped/strawberry9.jpg",
+],
     description: "Fresh strawberries dipped in premium chocolate",
     sizes: {
       "5": "Rs 450",
@@ -85,27 +113,40 @@ export const AllProducts = {
 
 export const Reviews = [
   {
-    name: "Jane Doe",
-    comment: "The cake was fresh, moist, and absolutely perfect!",
+    name: "Divya",
+    comment: "The cake was super moist, yummy and that blueberry filling was such a nice touch, everyone LOOOOVEEED it. Sooo pretty. The cakesicles were so soft and tasty too, they didn't last long at all.Thanks again!",
+    image: "/images/portrait1-woman.jpg",
+    product: "Cake + Cakesicles",
+  },
+  {
+    name: "Janice",
+    comment: "The birthday girl loved the cake! The design, the flavour, everything.Personally it tasted amazing so so good!.  When i get the chance to order another cake, definitely ordering from you girl.Thank you so much!",
     image: "/images/portrait1.jpg",
-    product: "Rosaline Cake",
+    product: "Chocolate  Cake w/ Raspberry coulis",
   },
   {
-    name: "John Smith",
-    comment: "Beautifully decorated and tasted just as amazing too.",
-    image: "/images/portrait2.jpg",
-    product: "Signature Cake",
-  },
-  {
-    name: "Raj Patel",
-    comment: "Highly recommend for birthdays, parties, or any occasion!",
+    name: "Prateek",
+    comment: "My girl and her whole family loved it.li ti super bon. Napolitaine, sugar coated berries, flowers, decos, were all perfect. My girl's family loved it and was so proud of me, that its even more sure that im gonna marry her ",
     image: "/images/portrait4.jpg",
-    product: "Chocolate Cake",
+    product: "Box of 15",
   },
 ];
 
 export const images = [
-  { src: "/images/cake1.jpg" },
-  { src: "/images/cake2.jpg" },
-  { src: "/images/cake3.jpg" },
+  { src: "/images/cakes/cake1.jpg" },
+  { src: "/images/cakes/cake4.jpg" },
+  { src: "/images/cakes/cake10.jpg" },
+  { src: "/images/strawberrydipped/strawberry2.jpg" },
+  { src: "/images/strawberrydipped/strawberry5.jpg" },
+  { src: "/images/strawberrydipped/strawberry8.jpg" },
+  { src: "/images/cakesicles/cakesicle1.jpg" },
+  { src: "/images/cakesicles/cakesicle3.jpg" },
+  { src: "/images/cakesicles/cakesicle2.jpg" },
+  { src: "/images/random/bouquet1.jpg" },
+  { src: "/images/random/bouquet2.jpg" },
+  { src: "/images/random/bouquet3.jpg" },
+  { src: "/images/random/cupcake.jpg" },
+  { src: "/images/random/napo1.jpg" },
+  { src: "/images/random/napo2.jpg" },
 ];
+

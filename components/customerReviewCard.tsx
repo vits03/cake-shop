@@ -35,14 +35,14 @@ const CustomerReviewCard = ({ review }: ReviewsProps) => {
       initial={{ opacity: 0, y: 60 }}
       animate={controls}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className=" py-2  px-4 w-8/10 md:w-95/100 justify-center items-center relative flex flex-col border-primary bg-white border-4 rounded-2xl shadow-lg"
+      className=" py-2  px-4 w-8/10 md:w-95/100 justify-center items-center min-h-[325px] relative flex flex-col border-primary bg-white border-4 rounded-2xl shadow-lg"
     >
       <Image
         src={cakeSlice}
         height={100}
         width={100}
         alt="cupcake"
-        className="absolute size-12 rotate-15 top-6 left-2"
+        className="absolute size-12 rotate-15 top-8 left-2"
       />
       <Image
         src={donut}
@@ -52,7 +52,7 @@ const CustomerReviewCard = ({ review }: ReviewsProps) => {
         className="absolute size-17 rotate-15  bottom-4  -right-1"
       />
 
-      <p className="text-primary text-xs self-center font-medium mb-3">
+      <p className="text-primary text-xs self-center  max-w-8/10 text-center font-medium mb-5">
         {review.product}
       </p>
       <p className="text-md text-pink-950 w-8/10 my-2 py-7 styled-font font-medium  text-center">
