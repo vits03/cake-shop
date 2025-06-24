@@ -16,12 +16,12 @@ export const metadata = {
     "designer cakes",
     "Audette cakes",
     "Mauritius"
-  ]  ,metadataBase: new URL("#"), // Replace with your actual domain
+  ]  ,/* metadataBase: new URL("#"), // Replace with your actual domain
 
   openGraph: {
     title: "Audette – Cake Shop in Mauritius",
     description: "Custom cakes made with love in Mauritius. Explore our collection of birthday cakes, wedding cakes, and more.",
-    url: "#",
+  url: "#",
     siteName: "Audette Cakes",
     images: [
       {
@@ -57,7 +57,7 @@ export const metadata = {
   alternates: {
     canonical: "#",
   },
-
+*/
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
