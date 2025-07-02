@@ -49,7 +49,7 @@ const ModelViewer = () => {
             <ambientLight intensity={1} />
 
     {/* Hemisphere light for overall softness */}
-    <hemisphereLight skyColor="#ffffff" groundColor="#bbbbbb" intensity={0.6} />
+    <hemisphereLight  groundColor="#bbbbbb" intensity={0.6} />
 
     {/* Directional lights from all sides */}
     <directionalLight position={[0, 10, 0]} intensity={1} />
