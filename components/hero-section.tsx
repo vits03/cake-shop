@@ -12,7 +12,6 @@ const ModelViewer = dynamic(() => import("./modelViewer"), {
 });import Image from "next/image";
 import { motion } from "framer-motion";
 import cookie from "@/public/cookie.png";
-const Confetti = dynamic(() => import("react-confetti"), { ssr: false });
 import { useWindowSize } from "@react-hook/window-size";
 const HeroSection = () => {
   //inlcude  header msg , gradient bg and rotating 3d model.
@@ -21,7 +20,7 @@ const HeroSection = () => {
     <div id="hero" className=" hero  ">
       
       
-      <section className="max-w-7xl mt-15  mx-auto  md:px-10 px-5 flex flex-col py-5">
+      <section className="max-w-7xl mt-15  mx-auto  md:px-10 px-5 flex flex-col py-15">
         <a
           href="http://wa.me/59256089"
           target="_blank"
@@ -41,15 +40,15 @@ const HeroSection = () => {
             <div className="text-2xl lg:text-4xl min-w-60 text-primary leading-tight">
               <div className="wrapper">
                 <div className="slide-container px-2  s">
-                  <div className="slide">Delight 🥰</div>
-                  <div className="slide">Freshness 🍰</div>
-                  <div className="slide">Love ❤️</div>
-                  <div className="slide">Comfort 🛋️</div>
-                  <div className="slide">Goodness 🌟</div>
-                  <div className="slide">Passion 🍓</div>
-                  <div className="slide"> Celebration 🎉</div>
-                  <div className="slide">Craft 🧁</div>
-                  <div className="slide"> Bliss 🌈</div>
+                  <div className="slide">Delight </div>
+                  <div className="slide">Freshness </div>
+                  <div className="slide">Love </div>
+                  <div className="slide">Comfort </div>
+                  <div className="slide">Goodness </div>
+                  <div className="slide">Passion </div>
+                  <div className="slide"> Celebration </div>
+                  <div className="slide">Craft </div>
+                  <div className="slide"> Bliss </div>
                 </div>
               </div>
               <p className="mt-2 px-2  text-primary ">
@@ -68,7 +67,7 @@ const HeroSection = () => {
               </p>
             </div>
             <div>
-              <p className="text-pink-950 font-normal mt-5">
+              <p className="text-pink-950 font-normal mt-5 ml-2">
                 we offer custom cakes and selected pastries.
               </p>
             </div>
@@ -84,16 +83,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="3d-item relative">
-             <Confetti
-        width={300}
-        height={height}
-        numberOfPieces={50}
-        recycle={true}
-        gravity={0.04}
-        opacity={0.4}
-        wind={0.01}
-        className="pointer-events-none z-0"
-      /> 
+        
             <ModelViewer />
           </div>
         </div>

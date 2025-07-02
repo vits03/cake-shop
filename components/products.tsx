@@ -2,6 +2,7 @@ import React from 'react'
 import ImageSlider from './imageSlider'
 import ProductCard from './productCard'
 import { AllProducts } from '@/constants/constants'
+import { Heart } from 'lucide-react'
 const ProductSection = () => {
 
 
@@ -13,7 +14,7 @@ const ProductSection = () => {
       <ImageSlider/>
 
       
-               <p className='text-3xl styled-font font-semibold my-10  mt-20 text-primary'>💗 Our Products 💗</p>
+               <p className='text-3xl styled-font font-semibold my-10  mt-20 text-primary'><Heart  size={35} className='inline-block'/> Our Products <Heart   size={35} className='inline-block' /></p>
 
        <div  className="card-container  grid gap-5  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center place-items-center">
 

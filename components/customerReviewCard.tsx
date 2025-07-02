@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import cupcake from "@/public/cupcake.png";
 import donut from "@/public/donut.png";
 import cakeSlice from "@/public/cake-slice.png";
-
+import cookie from "@/public/cookie.png";
 interface Review {
   name: string;
   image: string;
@@ -45,11 +45,11 @@ const CustomerReviewCard = ({ review }: ReviewsProps) => {
         className="absolute size-12 rotate-15 top-9 left-2"
       />
       <Image
-        src={donut}
+        src={cookie}
         height={100}
         width={100}
         alt="cupcake"
-        className="absolute size-17 rotate-15  bottom-4  -right-1"
+        className="absolute size-10 rotate-15  bottom-8  right-5"
       />
 
       <p className="text-primary text-xs self-center  max-w-8/10 text-center font-medium mb-5">

@@ -121,7 +121,7 @@ export default function OrderCakeModal({ product }: ProductCardProps) {
   }}
 >
         <DialogTrigger asChild>
-          <Button className="buy-btn text-sm my-1 font-semibold w-7/10 mx-auto rounded-full">
+          <Button className="buy-btn text-sm my-1 bg-pink-950/80 font-semibold w-7/10 mx-auto rounded-full">
             Order Cake
           </Button>
         </DialogTrigger>

@@ -28,18 +28,18 @@ const sizes = AllProducts[product].sizes as Record<string, string>;
       <ImageSliderCard product={product}/>
 
       <div className='px-2 py-1 flex flex-col justify-center space-y-1'>
-        <p className='text-md text-primary text-left pl-2 font-semibold'>
+        <p className='text-md text-pink-900 text-left pl-2 font-semibold'>
           {data.title}
         </p>
 
-        <p className='text-left text-xs w-95/100 self-center font-medium text-pink-900'>
+        <p className='text-left text-xs w-95/100 self-center font-medium  text-primary'>
           {data.description}
         </p>
 
-        <div className='price mt-1 text-pink-950 font-semibold pl-2 text-left text-md'>
-         { product === "cake" ? <span className='text-primary text-sm font-semibold'>
+        <div className='price mt-1 text-pink-900 font-semibold pl-2 text-left text-md'>
+         { product === "cake" ? <span className=' text-sm font-semibold'>
             {firstPrice} <span className='text-xs'>(starting)</span>
-          </span> :  <span className='text-primary text-sm font-semibold'>
+          </span> :  <span className='text-sm font-semibold'>
              {firstPrice} <span className='text-xs'>(Box of {firstSize})
 </span>
           </span>}
