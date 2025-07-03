@@ -44,7 +44,7 @@ export default function ImageSliderCard({ product }: ProductCardProps) {
           alt={`Slider Image ${currentIndex + 1}`}
           layout="fill"
           objectFit="cover"
-          className={`transition-all duration-500 ease-in-out cursor-pointer rounded-t-xl ${product === "cake" && "object-bottom"}  `   }
+          className={`transition-all duration-500 ease-in-out cursor-pointer rounded-t-xl ${ product.includes("cake")  && "object-bottom"}  `   }
         />
 
         <button
