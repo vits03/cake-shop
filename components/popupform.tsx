@@ -121,8 +121,8 @@ export default function OrderCakeModal({ product }: ProductCardProps) {
   }}
 >
         <DialogTrigger asChild>
-          <Button className="buy-btn text-sm my-1 bg-pink-950/80 font-semibold w-7/10 mx-auto rounded-full">
-            Order Cake
+          <Button className="buy-btn text-sm my-1 bg-pink-950/70 font-semibold w-7/10 mx-auto rounded-full">
+            Order 
           </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-sm">
@@ -174,7 +174,7 @@ pattern="^5\d{7}$"
 onValueChange={(value: string) => {
   setCakeSize(value);
 
-  if (product !== "cake") {
+  if (product !== "cake" && product !== "cake2" && product !== "cake3" ) {
     const sizes = AllProducts[product].sizes as Record<string, string>;
     const selectedPrice = sizes[value];
     const priceNumber = Number((selectedPrice).replace(/[^\d]/g, ""));
@@ -188,11 +188,12 @@ onValueChange={(value: string) => {
                   <SelectValue placeholder="Select a size" />
                 </SelectTrigger>
                 <SelectContent>
-{product === "cake" ? (
+              {product === "cake3" ? (
+  <SelectItem value="Bento">
+    Bento (5 pax) – As from {AllProducts.cake.sizes.Bento.vanilla}
+  </SelectItem>
+) : product === "cake" || product === "cake2" ? (
   <>
-    <SelectItem value="Bento">
-      Bento (5 pax) – As from {AllProducts.cake.sizes.Bento.vanilla}
-    </SelectItem>
     <SelectItem value="Classic">
       Classic (10–12 pax) – As from {AllProducts.cake.sizes.Classic.vanilla}
     </SelectItem>
@@ -208,11 +209,14 @@ onValueChange={(value: string) => {
   ))
 )}
 
+
+
+
               
                   </SelectContent>
               </Select>
             </div>
-    {product === "cake" && (
+    {(product === "cake" || product==="cake2" || product==="cake3" )&& (
   <div className="grid gap-2">
     <Label htmlFor="flavour">Flavour</Label>
  <Select

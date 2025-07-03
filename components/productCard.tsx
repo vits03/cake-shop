@@ -13,8 +13,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const data = AllProducts[product]
   let firstPrice="0";
   let firstSize="";
-  if ( product === "cake"){
-   firstPrice = AllProducts["cake"].sizes.Bento.vanilla
+  if ( product === "cake" || product==="cake2"){
+   firstPrice = AllProducts["cake"].sizes.Classic.vanilla
+  }
+  else if ( product === "cake3"){
+      firstPrice = AllProducts["cake"].sizes.Bento.vanilla
+
   }
   else {
 const sizes = AllProducts[product].sizes as Record<string, string>;
@@ -32,12 +36,12 @@ const sizes = AllProducts[product].sizes as Record<string, string>;
           {data.title}
         </p>
 
-        <p className='text-left text-xs w-95/100 self-center font-medium  text-primary'>
+        <p className='text-left text-xs w-95/100 self-center font-semibold text-primary'>
           {data.description}
         </p>
 
         <div className='price mt-1 text-pink-900 font-semibold pl-2 text-left text-md'>
-         { product === "cake" ? <span className=' text-sm font-semibold'>
+         { product === "cake"|| product==="cake2" || product==="cake3" ? <span className=' text-sm font-semibold'>
             {firstPrice} <span className='text-xs'>(starting)</span>
           </span> :  <span className='text-sm font-semibold'>
              {firstPrice} <span className='text-xs'>(Box of {firstSize})

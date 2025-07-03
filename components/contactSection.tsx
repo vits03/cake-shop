@@ -34,21 +34,21 @@ const ContactSection = () => {
       transition={{ duration: 0.5, ease: 'easeOut' }}
 className="flex flex-col md:flex-row  items-center gap-10 text-lg text-primary"      >
    
-        <a href="tel:+230 59256089" className="flex items-center gap-3 hover:text-pink-300 transition">
+        <a href="tel:+230 59256089" className="flex items-center gap-3 hover:text-primary/60 transition">
           <Phone size={22} /> 59256089
         </a>
 
-        <a href="mailto:hello@pawtisserie.com" className="flex items-center gap-3 hover:text-pink-300 transition">
+        <a href="mailto:hello@pawtisserie.com" className="flex items-center gap-3 hover:text-primary/60 transition">
           <Mail size={22} /> gireshnasoogumbur@gmail.com
         </a>
 
-        <a href="https://wa.me/23059256089" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-pink-300 transition">
+        <a href="https://wa.me/23059256089" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-primary/60 transition">
           <MessageCircle size={22} /> WhatsApp Chat
         </a>
 
         
 
-        <a href="https://www.instagram.com/audette_1975" target="_blank"  rel="noopener noreferrer"  className="flex items-center gap-3 hover:text-pink-300 transition">
+        <a href="https://www.instagram.com/audette_1975" target="_blank"  rel="noopener noreferrer"  className="flex items-center gap-3 hover:text-primary/60 transition">
           <Instagram size={22} /> Instagram
         </a>
      </motion.div>

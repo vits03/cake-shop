@@ -36,7 +36,7 @@ export const Products = [
 
 export const AllProducts = {
   cake: {
-    title: "Custom Cake",
+    title: "Custom Birthday Cake",
     description: "Order a cake by selecting size and flavour",
     images:[
   "/images/cakes/cake1.jpg",
@@ -73,6 +73,75 @@ export const AllProducts = {
         lemon: "Rs 2500",
          chocolate: "Rs 2500"
       }
+    }
+  },
+   cake2: {
+    title: "Custom Wedding Cake",
+    description: "Order a cake by selecting size and flavour",
+    images:[
+  "/images/cakes/cake1.jpg",
+  "/images/cakes/cake2.jpg",
+  "/images/cakes/cake3.jpg",
+  "/images/cakes/cake4.jpg",
+  "/images/cakes/cake5.jpg",
+  "/images/cakes/cake6.jpg",
+  "/images/cakes/cake7.jpg",
+  "/images/cakes/cake8.jpg",
+  "/images/cakes/cake9.jpg",
+  "/images/cakes/cake10.jpg",
+  "/images/cakes/cake11.jpg",
+  "/images/cakes/cake12.jpg",
+  "/images/cakes/cake13.jpg",
+  "/images/cakes/cake14.jpg",
+],
+    sizes: {
+      Bento: {
+        vanilla: "Rs 590",
+        almond: "Rs 690",
+        lemon: "Rs 790",
+         chocolate: "Rs 790",
+      },
+      Classic: {
+        vanilla: "Rs 1800",
+        almond: "Rs 2000",
+        lemon: "Rs 2000",
+         chocolate: "Rs 2000"
+      },
+      Deluxe: {
+         vanilla: "Rs 2200",
+        almond: "Rs 2500",
+        lemon: "Rs 2500",
+         chocolate: "Rs 2500"
+      }
+    }
+  },
+   cake3: {
+    title: "Bento Cake",
+    description: "Order a cake by selecting size and flavour",
+    images:[
+  "/images/cakes/cake1.jpg",
+  "/images/cakes/cake2.jpg",
+  "/images/cakes/cake3.jpg",
+  "/images/cakes/cake4.jpg",
+  "/images/cakes/cake5.jpg",
+  "/images/cakes/cake6.jpg",
+  "/images/cakes/cake7.jpg",
+  "/images/cakes/cake8.jpg",
+  "/images/cakes/cake9.jpg",
+  "/images/cakes/cake10.jpg",
+  "/images/cakes/cake11.jpg",
+  "/images/cakes/cake12.jpg",
+  "/images/cakes/cake13.jpg",
+  "/images/cakes/cake14.jpg",
+],
+    sizes: {
+      Bento: {
+        vanilla: "Rs 590",
+        almond: "Rs 690",
+        lemon: "Rs 790",
+         chocolate: "Rs 790",
+      },
+     
     }
   },
   cakesicles: {

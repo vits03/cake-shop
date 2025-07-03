@@ -79,7 +79,7 @@
   --muted-foreground: oklch(0.5 0 0);     /* Soft neutral gray */
 
   /* === Accent (links, etc) === */
-  --accent: oklch(0.8 0.18 330);          /* Rose pink */
+  --accent: oklch(0.6323 0.0635 7.14);;          /* Rose pink */
   --accent-foreground: oklch(1 0 0);      /* White */
 
   /* === Destructive (warnings, errors) === */
@@ -89,7 +89,7 @@
   /* === Border, Input, Ring === */
   --border: oklch(0.92 0.01 300);         /* Soft lavender-gray */
   --input: oklch(0.95 0.01 300);
-  --ring: oklch(0.75 0.1 300);            /* Light purple ring */
+  --ring: oklch(0.6323 0.0635 7.14);            /* Light purple ring */
 
   /* === Chart Colors === */
   --chart-1: oklch(0.65 0.22 330); /* Rose */

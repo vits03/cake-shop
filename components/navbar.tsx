@@ -34,7 +34,7 @@ const Navbar = () => {
 
       {/* Mobile Menu with Transition */}
       <div
-        className={`transition-all duration-300 ease-in-out right-0 overflow-hidden md:hidden bg-[#F564A9] px-8 ${
+        className={`transition-all duration-300 ease-in-out right-0 overflow-hidden md:hidden bg-primary px-8 ${
           menuOpen ? 'max-h-64 py-3' : 'max-h-0 py-0'
         }`}
       >
