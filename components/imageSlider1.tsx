@@ -11,7 +11,6 @@ type ProductCardProps = {
 
 export default function ImageSliderCard({ product }: ProductCardProps) {
   const images = AllProducts[product].images;
-  console.log(images);  
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isHovered, setIsHovered] = useState<boolean>(false);
 

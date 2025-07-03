@@ -203,3 +203,13 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   html {
     scroll-behavior: smooth;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+  .slide-container {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+.slide-container {
+  will-change: transform;
+}

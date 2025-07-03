@@ -40,8 +40,9 @@ export const AllProducts = {
     description: "Order a cake by selecting size and flavour",
     images: [
       "/images/cakes/cake8.jpg",
-  
- 
+      "/images/bento/bento1.jpg",
+      "/images/bento/bento2.jpg",
+      "/images/bento/bento3.jpg",
       "/images/cakes/cake12.jpg",
      
     ],
@@ -201,4 +202,6 @@ export const images = [
   { src: "/images/random/cupcake.jpg" },
   { src: "/images/random/napo1.jpg" },
   { src: "/images/random/napo2.jpg" },
+  { src: "/images/cakesicles/cakesicle4.jpg"},
+  { src: "/images/cakesicles/cakesicle5.jpg" },
 ];
